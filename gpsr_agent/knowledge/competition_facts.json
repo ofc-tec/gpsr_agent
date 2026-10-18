@@ -1,0 +1,652 @@
+{
+  "facts": [
+    {
+      "subject": "Adel",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Angel",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Axel",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Charlie",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Jane",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Jules",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Morgan",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Paris",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Robin",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "Simone",
+      "relation": "is_person",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bedroom",
+      "relation": "is_room",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "kitchen",
+      "relation": "is_room",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "office",
+      "relation": "is_room",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "living room",
+      "relation": "is_room",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bathroom",
+      "relation": "is_room",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bed",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bedside table",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "shelf",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "trashbin",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "dishwasher",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "potted plant",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "kitchen table",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "chairs",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "pantry",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "refrigerator",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "sink",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cabinet",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "coatrack",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "desk",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "armchair",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "desk lamp",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "waste basket",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "tv stand",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "storage rack",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "lamp",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "side tables",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "sofa",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bookshelf",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "entrance",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "exit",
+      "relation": "is_location",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bed",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bedside table",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "shelf",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "dishwasher",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "kitchen table",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "pantry",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "refrigerator",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "sink",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cabinet",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "desk",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "tv stand",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "storage rack",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "side tables",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "sofa",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bookshelf",
+      "relation": "can_place_at",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "orange juice",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "red wine",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "milk",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "iced tea",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cola",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "tropical juice",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "juice pack",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "apple",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "pear",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "lemon",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "peach",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "banana",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "strawberry",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "orange",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "plum",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cheezit",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cornflakes",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "pringles",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "tuna",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "sugar",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "strawberry jello",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "tomato soup",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "mustard",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "chocolate jello",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "spam",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "coffee grounds",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "plate",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "fork",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "spoon",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cup",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "knife",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "bowl",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "rubiks cube",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "soccer ball",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "dice",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "tennis ball",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "baseball",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cleanser",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "sponge",
+      "relation": "is_object",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "drink",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "drink",
+      "relation": "plural_name",
+      "object": "drinks",
+      "source": "competition_template"
+    },
+    {
+      "subject": "fruit",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "fruit",
+      "relation": "plural_name",
+      "object": "fruits",
+      "source": "competition_template"
+    },
+    {
+      "subject": "snack",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "snack",
+      "relation": "plural_name",
+      "object": "snacks",
+      "source": "competition_template"
+    },
+    {
+      "subject": "food",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "food",
+      "relation": "plural_name",
+      "object": "foods",
+      "source": "competition_template"
+    },
+    {
+      "subject": "dish",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "dish",
+      "relation": "plural_name",
+      "object": "dishes",
+      "source": "competition_template"
+    },
+    {
+      "subject": "toy",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "toy",
+      "relation": "plural_name",
+      "object": "toys",
+      "source": "competition_template"
+    },
+    {
+      "subject": "cleaning supply",
+      "relation": "is_category",
+      "object": true,
+      "source": "competition_template"
+    },
+    {
+      "subject": "cleaning supply",
+      "relation": "plural_name",
+      "object": "cleaning supplies",
+      "source": "competition_template"
+    }
+  ]
+}

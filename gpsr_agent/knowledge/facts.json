@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "note": "ILLUSTRATIVE seed facts; replace/expand from CompetitionTemplate.",
+  "facts": [
+    {"subject": "refrigerator", "relation": "inside", "object": "kitchen", "kind": "structural", "source": "seed"},
+    {"subject": "bedside_table", "relation": "inside", "object": "bedroom", "kind": "structural", "source": "seed"},
+    {"subject": "strawberry_jello", "relation": "usually_found_at", "object": "bedside_table", "kind": "default", "source": "seed"},
+    {"subject": "sponge", "relation": "usually_found_at", "object": "kitchen_table", "kind": "default", "source": "seed"},
+    {"subject": "kitchen_table", "relation": "inside", "object": "kitchen", "kind": "structural", "source": "seed"},
+    {
+  "relation": "instruction_point",
+  "subject": "robot",
+  "object": "gpsr_instruction_point",
+  "source": "competition_config"
+    }
+  ]
+}

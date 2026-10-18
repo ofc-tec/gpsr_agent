@@ -1,0 +1,23 @@
+[project]
+name = "gpsr-agent"
+version = "0.1.0"
+description = "GPSR grounded planning agent, ROS-independent core"
+requires-python = ">=3.12"
+dependencies = [
+  "langchain>=1.0,<2",
+  "langchain-google-genai>=3.0,<5",
+  "langchain-ollama>=0.3.10,<2",
+  "python-dotenv>=1.0,<2",
+  "pydantic>=2,<3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+gpsr-agent = "gpsr_agent.agent:main"
+gpsr-agent-ollama = "gpsr_agent.ollama_agent:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

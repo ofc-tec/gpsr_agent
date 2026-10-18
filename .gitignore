@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+.agents/
+.aws/
+.codex/
+evaluations.jsonl
+knowledge_proposals.jsonl
+*.bak

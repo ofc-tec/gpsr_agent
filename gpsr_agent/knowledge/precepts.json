@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "precepts": [
+    {"id": "grounding", "instruction": "Use only known locations and objects, or explicitly flag missing world knowledge."},
+    {"id": "uncertainty", "instruction": "A usual location is not a confirmed current location; plans must use detection before grasping."},
+    {"id": "perception", "instruction": "Use detect_person or detect_object with appropriate attributes rather than inventing new perception actions."},
+    {"id": "validation", "instruction": "Every action must belong to the eight-action vocabulary. Validate before returning."},
+    {"id": "no_execution", "instruction": "Only plan; do not claim any physical action occurred."},
+    {
+  "name": "return_to_instruction_point",
+  "when": "A GPSR task requires reporting results or delivering an object",
+  "then": "Navigate to gpsr_instruction_point before reporting or delivering the object",
+  "priority": "mandatory"
+    }
+  ]
+}

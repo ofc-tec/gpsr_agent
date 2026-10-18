@@ -1,0 +1,7 @@
+[tool.uv.workspace]
+members = ["gpsr_agent"]
+
+[dependency-groups]
+dev = [
+    "langchain-openai>=1.7.2",
+]
