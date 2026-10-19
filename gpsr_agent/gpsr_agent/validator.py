@@ -6,11 +6,12 @@ ARG_KEYS = {
     "detect_person": {"person", "location", "gesture", "clothing_color", "attributes"},
     "grasp": {"object"}, "release": {"object", "target", "location"},
     "follow_person": {"person", "destination"}, "say": {"text"}, "listen": {"prompt"},
+    "count_objects": {"category", "location"},
 }
 REQUIRED = {
     "navigate_to": {"location"}, "detect_object": {"object"}, "detect_person": set(),
     "grasp": {"object"}, "release": {"object"}, "follow_person": {"person"},
-    "say": {"text"}, "listen": set(),
+    "say": {"text"}, "listen": set(),"count_objects": {"category", "location"},
 }
 
 def entity_key(value: str) -> str:

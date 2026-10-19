@@ -46,7 +46,7 @@ From `~/gpsr_agent` (the uv workspace root):
 ```bash
 # Normal planning behaves as before.
 uv run python -m gpsr_agent.agent
-# After the final result, accept or reject it and explain a rejection.
+# Review Gemini's proposed verdict and written feedback.
 uv run python -m gpsr_agent.agent --feedback
 # Review reusable improvements inferred from rejected evaluations.
 uv run python -m gpsr_agent.knowledge_extractor
@@ -75,6 +75,46 @@ review against the displayed existing precepts. No existing rules are replaced.
 Skills and validators remain development suggestions there; the extractor never
 implements code, capabilities, ROS changes, or Behavior Trees. No new dependencies
 are required. A live extraction invokes the configured LLM.
+
+### Optional semantic Critic
+
+`--feedback` runs an independent Gemini Critic after deterministic validation and
+before human evaluation, including for invalid final plans. It receives the full
+instruction, plan, validation, both fact sources, precepts and capabilities. It
+checks task completion and execution-time mechanisms, rather than requiring
+future perception results to be known during planning. It does not repair plans.
+
+```dotenv
+GPSR_MODEL=openai:gpt-5-mini
+GPSR_CRITIC_MODEL=google_genai:gemini-3.8-flash
+```
+
+Use the existing Gemini credentials in `.env`, alongside the planner credentials.
+
+```bash
+uv run python -m gpsr_agent.agent --feedback
+```
+
+After displaying Gemini's proposed plan verdict and written feedback, the terminal
+offers **Accept / Edit / Reject**. Accept adopts both fields as human-reviewed
+feedback; accepting a rejecting evaluation still means rejecting the plan. Edit
+allows changing the verdict and text (Enter keeps the proposed value). Reject
+declines the assessment and requires your own explicit plan verdict and feedback.
+Written feedback is required for rejected plans; no evaluation is adopted by default.
+
+The evaluation log preserves the original `critic` and `critic_model` separately
+from the final human-reviewed `accepted` and `feedback` fields. It also records
+`review_action` (accept/edit/reject/manual), `feedback_source`
+(critic/human_edited/human), and `feedback_reviewed`. The Critic cannot review its
+own feedback on behalf of the human. If it fails, the error is displayed and saved
+as `critic_error`, with `critic` set to null, and manual human evaluation continues.
+The Knowledge Extractor processes rejected plans with human-reviewed feedback,
+including explicitly adopted Gemini feedback. Unreviewed machine feedback is
+excluded; legacy entries containing direct human feedback remain supported.
+Knowledge proposals still require their separate approval before any fact/precept
+update. Reviewing an evaluation never automatically establishes world knowledge.
+Without `--feedback`, the Critic is never invoked. The Critic has no write tools
+and cannot modify knowledge, capabilities, or plans.
 
 ## Design
 

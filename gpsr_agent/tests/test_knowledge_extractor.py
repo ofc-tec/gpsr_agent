@@ -7,9 +7,18 @@ from langchain_core.messages import AIMessage
 from pydantic import ValidationError
 
 from gpsr_agent import agent
+from gpsr_agent.critic import Critique
 from gpsr_agent.knowledge_extractor import (
     Proposal, Proposals, read_evaluations, review_proposals,
 )
+
+
+@pytest.fixture(autouse=True)
+def mock_critic(monkeypatch):
+    # Feedback unit tests must never call a live provider.
+    monkeypatch.setattr(agent, "evaluate_plan", lambda *args: Critique(
+        accepted=True, issues=[], recommendation="No changes needed.", feedback="The plan fulfills the command."
+    ))
 
 
 @pytest.fixture
@@ -43,7 +52,7 @@ EVALUATIONS = [{"id": "evaluation_001", "accepted": False,
                 "feedback": "You must check that the person is following."}]
 
 
-@pytest.mark.parametrize("answer", ["", "n"])
+@pytest.mark.parametrize("answer", ["y", "n"])
 def test_feedback_persistence_and_flag(knowledge, monkeypatch, answer):
     monkeypatch.setattr(agent, "DEFAULT_KNOWLEDGE", knowledge)
     plan = {"command": "say hello", "steps": [{"action": "say", "args": {"text": "hello"}}]}
@@ -51,18 +60,18 @@ def test_feedback_persistence_and_flag(knowledge, monkeypatch, answer):
         "messages": [AIMessage(content=json.dumps(plan))]
     })
     with patch("sys.argv", ["gpsr-agent", "--feedback", "say hello"]):
-        with patch("builtins.input", side_effect=[answer, "Wrong greeting"]):
+        with patch("builtins.input", side_effect=["reject", answer, "Wrong greeting"]):
             agent.run_cli(fake, "test:model")
     path = knowledge.parent / "evaluations.jsonl"
     saved = json.loads(path.read_text())
     assert saved["instruction"] == "say hello"
     assert saved["plan"] == plan
     assert saved["validation"]["valid"] is True
-    assert saved["accepted"] is (answer == "")
-    assert saved["feedback"] == ("" if answer == "" else "Wrong greeting")
+    assert saved["accepted"] is (answer == "y")
+    assert saved["feedback"] == "Wrong greeting"
     assert saved["timestamp"] and saved["id"].startswith("evaluation_")
     assert saved["model"] == "test:model"
-    assert len(read_evaluations(path)) == (0 if answer == "" else 1)
+    assert len(read_evaluations(path)) == (0 if answer == "y" else 1)
 
 
 def test_normal_run_does_not_prompt_or_save(knowledge, monkeypatch):
@@ -80,7 +89,7 @@ def test_feedback_includes_invalid_final_result(knowledge, monkeypatch):
     plan = {"command": "x", "steps": [{"action": "teleport", "args": {}}]}
     fake = SimpleNamespace(invoke=lambda _: {"messages": [AIMessage(content=json.dumps(plan))]})
     with patch("sys.argv", ["gpsr-agent", "x", "--feedback"]):
-        with patch("builtins.input", side_effect=["n", "Unsupported action"]):
+        with patch("builtins.input", side_effect=["reject", "n", "Unsupported action"]):
             agent.run_cli(fake, "test:model")
     saved = json.loads((knowledge.parent / "evaluations.jsonl").read_text())
     assert saved["plan"] == plan

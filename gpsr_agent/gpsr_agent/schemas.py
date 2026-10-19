@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field, ConfigDict
 
 ActionName = Literal[
     "navigate_to", "detect_object", "detect_person", "grasp",
-    "release", "follow_person", "say", "listen",
+    "release", "follow_person", "say", "listen","count_objects",
 ]
 
 class Step(BaseModel):

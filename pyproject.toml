@@ -5,3 +5,7 @@ members = ["gpsr_agent"]
 dev = [
     "langchain-openai>=1.7.2",
 ]
+
+[tool.pytest.ini_options]
+# ROS-sourced shells expose launch plugins outside this standalone project's venv.
+addopts = "-p no:launch_pytest -p no:launch_testing -p no:launch_ros"
